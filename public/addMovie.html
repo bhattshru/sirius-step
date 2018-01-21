@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add Movie</title>
+    <meta name="description" content="Add Movie Details">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/movie.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+
+</head>
+<body class="container">
+  <header class="">
+    <img class="fleft logo" src="images/projector-logo.png" alt="logo" />
+    <ul class="fright">
+      <li><a href="/">HOME</a></li>
+      <li><a href="#">ADD MOVIE</a></li>
+    </ul>
+  </header>
+  <div class="clearfix"></div>
+  <form class="add_movie_form" id="add_movie_form" onsubmit="event.preventDefault(); addMovie();">
+    <h2>Add a New Movie</h2>
+    <ul>
+      <li>
+          <label for="name">Movie Name</label>
+          <input type="text" name="name" required />
+      </li>
+      <li>
+          <label for="releaseYear">Release Year</label>
+          <input type="text" name="releaseYear" required />
+      </li>
+      <li>
+        <div class="divide">
+          <label for="language">Language</label>
+          <select name="language">
+           <option value="english">English</option>
+           <option value="tamil">Tamil</option>
+           <option value="hindi">Hindi</option>
+           <option value="malayalam">Malayalam</option>
+         </select>
+       </div><div class="divide">
+          <label for="rating">Rating</label>
+          <select name="rating">
+           <option value="5">5</option>
+           <option value="4">4</option>
+           <option value="3">3</option>
+           <option value="2">2</option>
+           <option value="1">1</option>
+         </select>
+        </div>
+      </li>
+      <li>
+          <label for="thumbnailUrl">Thumbnail URL</label>
+          <input type="url" name="thumbnailUrl" required />
+      </li>
+      <li>
+          <label for="plot">Plot</label>
+          <textarea rows="6" name="plot"></textarea>
+      </li>
+      <li>
+          <label for="posterUrl">Poster URL</label>
+          <input type="url" name="posterUrl" />
+      </li>
+      <li>
+          <label for="cast">Cast</label>
+          <textarea rows="6" name="cast"></textarea>
+      </li>
+    </ul>
+    <button id="submit">SAVE</button>
+  </form>
+  <div class="clearfix"></div>
+  <footer class="">
+    <img class="fright logo" width="200" src="images/projector-logo.png" alt="logo" />
+    <div class="link-grp fleft ">
+      <a href="#" class="link facebook"></a>
+      <a href="#" class="link twitter"></a>
+      <a href="#" class="link insta"></a>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/addMovie.js" ></script>
+</body>
+</html>
